@@ -16,17 +16,17 @@
         <java.version>1.7</java.version>
     </properties>
 
-    <parent>
+    <!--<parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.4.2.RELEASE</version>
-    </parent>
+    </parent>-->
 
     <dependencies>
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>junit</groupId>
@@ -34,7 +34,7 @@
             <version>4.12</version>
         </dependency>
 
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-velocity</artifactId>
         </dependency>
@@ -42,18 +42,20 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>4.1.6.RELEASE</version>
+            <!--<version>4.2.6.RELEASE</version>-->
         </dependency>
         <!-- spring aop支持 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
             <version>4.1.6.RELEASE</version>
+            <!--<version>4.2.6.RELEASE</version>-->
         </dependency>
         <!-- aspectj 支持-->
         <dependency>
@@ -66,6 +68,19 @@
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>1.8.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.3</version>
+        </dependency>
+
+        <!-- 增加JSR-250的支持 -->
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>jsr250-api</artifactId>
+            <version>1.0</version>
         </dependency>
 
     </dependencies>
