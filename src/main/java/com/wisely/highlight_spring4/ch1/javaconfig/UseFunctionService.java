@@ -1,5 +1,7 @@
 package com.wisely.highlight_spring4.ch1.javaconfig;
 
+import javax.annotation.Resource;
+
 import com.wisely.highlight_spring4.ch1.javaconfig.FunctionService;
 
 /**
@@ -10,6 +12,9 @@ public class UseFunctionService {
 
     //没有使用@autowired注解注入bean
     FunctionService functionService;
+	
+//	@Resource
+//	FunctionService functionService;
 
     public void setFunctionService(FunctionService functionService){
         this.functionService = functionService;
