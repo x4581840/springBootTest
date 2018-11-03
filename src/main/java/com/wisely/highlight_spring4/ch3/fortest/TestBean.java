@@ -2,7 +2,8 @@ package com.wisely.highlight_spring4.ch3.fortest;
 
 /**
  * Created by wb-ljy189959 on 2017/7/3.
- * 集成测试Bean
+ * 集成测试Bean 
+ * 测试类在src/test/java目录下的DemoBeanIntegrationTests
  */
 public class TestBean {
     private String content;

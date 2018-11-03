@@ -25,6 +25,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 //@ActiveProfiles("dev") //测试不通过
 public class DemoBeanIntegrationTests {
 
+	//可以使用普通的@Autowired注入bean
     @Autowired
     private TestBean testBean;
 

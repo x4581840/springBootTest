@@ -44,8 +44,8 @@ public class ElConfig {
     @Value("#{demoService.another}")
     private String fromAnother;
     //注入文件资源
-    //@Value("classpath:com/wisely/highlight_spring4/ch2/el/test.txt") FileNotFoundException
-    @Value("file:D:/myTest/spring-boot-test/src/main/java/com/wisely/highlight_spring4/ch2/el/test.txt")
+    @Value("classpath:com/wisely/highlight_spring4/ch2/el/test.properties")
+    //@Value("file:D:\\code\\springBootTest\\src\\main\\java\\com\\wisely\\highlight_spring4\\ch2\\el\\test.txt")
     private Resource testFile;
     //注入网址资源
     @Value("http://www.baidu.com")
@@ -63,10 +63,10 @@ public class ElConfig {
     @Autowired
     private Environment environment;
 
-    @Bean
+   /* @Bean
     public static PropertySourcesPlaceholderConfigurer propertyConfigure() {
         return new PropertySourcesPlaceholderConfigurer();
-    }
+    }*/
 
     public void outputResource() {
         try {
@@ -77,8 +77,8 @@ public class ElConfig {
             //如果上面的propertyConfigure返回值没有用static修饰，就会报空指针异常
             System.out.println(IOUtils.toString(testFile.getInputStream()));
             System.out.println(IOUtils.toString(testUrl.getInputStream()));
-            System.out.println(bookName);
-            System.out.println(environment.getProperty("book.author"));
+            System.out.println("bookName:"+bookName);
+            System.out.println("bookAuthor:"+environment.getProperty("book.author"));
 
         }catch (Exception  e) {
             e.printStackTrace();

@@ -1,0 +1,11 @@
+	测试时开发工作中不可或缺的部分。单元测试只是针对当前开发的类和方法进行测试，可以简单通过模拟依赖是
+实现，对运行环境没有依赖。但是仅仅进行单元测试是不够的，它只能验证当前类方法能否正常工作，而我们想要
+知道系统的各个部分组合在一起是否能正常工作，这就是集成测试存在的意义。
+	集成测试一般需要来自不同层的不同对象的交互，如数据库，网络连接，IOC容器等。其实我们也经常通过运行
+程序，然后通过自己的操作完成类似于集成测试的流程。集成测试为我提供了一种无需部署或者运行程序来完成验证系统
+各部分是否正常协同工作的能力。
+	Spring通过SpringTestContextFramework对集成测试提供顶级支持。它不依赖于特定的测试框架，
+既可使用Junit，也可以使用TestNGINX。
+	Spring提供了一个SpringJUnit4ClassRunner类，它提供了SpringTestContextFramework的功能
+，通过@ContextConfiguration来配置ApplicationContext，通过@ActiveProfiles确定活动的profile。
+			

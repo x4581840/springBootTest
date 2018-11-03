@@ -9,9 +9,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class DemoAnnotationService {
 
-    @Action(name="注解式拦截的add操作")
+    @Action(name="注解式拦截的add操作", address="address1")
     public void add(){}
 
-    @Action(name="注解式拦截的operate操作")
+    @Action(name="注解式拦截的operate操作", address="address2")
     public void operate(){}
+    
+    @Action(name = "注解delete", address="address3")
+    public void delete() {}
 }

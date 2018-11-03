@@ -13,9 +13,11 @@ public class Main {
             new AnnotationConfigApplicationContext(AwareConfig.class);
 
         AwareService service = context.getBean(AwareService.class);
-
+                
         service.outputResult();
-
+        
+        AwareService2 service2 = context.getBean(AwareService2.class);
+        System.out.println(service2.getClass().getName());
         context.close();
     }
 

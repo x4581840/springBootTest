@@ -1,0 +1,10 @@
+@Enable*注解的原理
+@EnableAsync开启异步方法的支持，
+@EnableScheduling开启计划任务的支持等
+所有的@Enable*注解都有一个@Import注解，用来导入配置类，这也就意味着这些自动开启的实现其实是导入了一些
+自动配置的bean。这些导入的配置方式主要分为以下三种类型：
+第一，直接导入配置类，例如@EnableScheduling
+
+第二，依据条件选择配置类，例如@EnableAsync
+
+第三，动态注册bean，例如@EnableAspectJAutoProxy

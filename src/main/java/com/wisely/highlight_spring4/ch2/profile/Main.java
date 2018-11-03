@@ -13,8 +13,8 @@ public class Main {
         //先将活动的profile设置为prod
         //然后注册Bean配置类，不注册的话会报Bean未定义错误
         //刷新容器
-        context.getEnvironment().setActiveProfiles("prod");
-        //context.getEnvironment().setActiveProfiles("dev");
+        //context.getEnvironment().setActiveProfiles("prod");
+        context.getEnvironment().setActiveProfiles("dev");
         context.register(ProfileConfig.class);
         context.refresh();
 
